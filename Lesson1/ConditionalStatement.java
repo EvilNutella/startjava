@@ -7,6 +7,7 @@ public class ConditionalStatement {
         } else {
             System.out.println("проходи, мы тебя ждали");
         }
+        
         boolean femininity = true;
 
         if (!femininity) {
@@ -14,6 +15,7 @@ public class ConditionalStatement {
         } else {
             System.out.println ("создания чудеснее я еще не встречал");
         }
+
         double height = 1.58;
 
         if (height < 1.88) {
@@ -21,6 +23,7 @@ public class ConditionalStatement {
         } else {
             System.out.println ("понятно");
         }
+
         char firstLetterOfName = 'N';
 
         if (firstLetterOfName == 'M') {
