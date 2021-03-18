@@ -3,13 +3,13 @@ public class Variable {
         byte mark = 53;
         short cpui5 = 8400;
         int ram = 8;
-        long windowsversion = 20;
-        float cpuGHz = 2.81f;
-        double assemblyOS = 19042.867;
+        long windowsVersion = 20;
+        float cpuGhz = 2.81f;
+        double assemblyOs = 19042.867d;
         char series = 'B';
         boolean x64 = true;
-        {
-        System.out.println("mark", "cpui5", "ram", "windowsversion", "cpuGHz", "assemblyOS", "series", "x64");
-        }
+        
+        System.out.println(mark +", " + cpui5 +", "+ ram + ", "+ windowsVersion +", "+ cpuGhz +", "+ assemblyOs +", "+ series +", "+ x64);
+        
     }
 }
