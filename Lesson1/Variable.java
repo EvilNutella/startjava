@@ -9,7 +9,7 @@ public class Variable {
         char series = 'B';
         boolean x64 = true;
         
-        System.out.println(mark +", " + cpui5 +", "+ ram + ", "+ windowsVersion +", "+ cpuGhz +", "+ assemblyOs +", "+ series +", "+ x64);
-        
+        System.out.println(mark + ", " + cpui5 + ", " + ram +", " + windowsVersion);
+        System.out.println(cpuGhz + ", " + assemblyOs + ", " + series + ", " + x64);
     }
 }
