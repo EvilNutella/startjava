@@ -1,7 +1,6 @@
 public class ConditionalStatement {
-    public static void main(String [] args){
+    public static void main(String[] args) {
         int age = 23;
-
         if (age > 20) {
             System.out.println("ты младше 20 лет");
         } else {
@@ -9,7 +8,6 @@ public class ConditionalStatement {
         }
         
         boolean femininity = true;
-
         if (!femininity) {
             System.out.println("вижу в тебе мужество, достойное короля");
         } else {
@@ -17,7 +15,6 @@ public class ConditionalStatement {
         }
 
         double height = 1.58;
-
         if (height < 1.88) {
             System.out.println ("может, ты еще вырастешь");
         } else {
@@ -25,7 +22,6 @@ public class ConditionalStatement {
         }
 
         char firstLetterOfName = 'N';
-
         if (firstLetterOfName == 'M') {
             System.out.println ("имя на М");
         } else if (firstLetterOfName == 'I') {
