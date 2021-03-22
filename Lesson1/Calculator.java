@@ -9,38 +9,28 @@ public class Calculator {
         System.out.print("Введите второе число: ");
         int num2 = 7;
 
-        int add = num1 + num2;
         if (operation == '+') {
+            int add = num1 + num2;
             System.out.println("= " + add);
-        }
-
-        int sub = num1 - num2;
-        if (operation == '-') {
+        } else if (operation == '-') {
+            int sub = num1 - num2;
             System.out.println("= " + sub);
-        }
-
-        int mult = num1 * num2;
-        if (operation == '*') {
+        } else if (operation == '*') {
+            int mult = num1 * num2;
             System.out.println("= " + mult);
-        }
-
-        int div = num1 / num2;
-        if (operation == '/') {
+        } else if (operation == '/') {
+            int div = num1 / num2;
             System.out.println("= " + div);
-        }
-
-        int pow;
-        int sum = 0;
-        if (operation == '^') {
+        } else if (operation == '^') {
+            int pow;
+            int sum = 0;
             for (int i = 1; i < num2; i++ ) {
                 pow = num1 * num1;
                 sum += pow;
             }
                 System.out.println(sum);
-        }
-        
-        int rem = num1 % num2;
-        if (operation == '%') {
+        } else if (operation == '%') {
+            int rem = num1 % num2;
             System.out.println("= " + rem);
         }
     }
