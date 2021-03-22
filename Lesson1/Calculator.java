@@ -10,28 +10,23 @@ public class Calculator {
         int num2 = 7;
 
         if (operation == '+') {
-            int add = num1 + num2;
-            System.out.println("= " + add);
+            System.out.println("= " + (num1 + num2));
         } else if (operation == '-') {
-            int sub = num1 - num2;
-            System.out.println("= " + sub);
+            System.out.println("= " + (num1 - num2));
         } else if (operation == '*') {
-            int mult = num1 * num2;
-            System.out.println("= " + mult);
+            System.out.println("= " + (num1 * num2));
         } else if (operation == '/') {
-            int div = num1 / num2;
-            System.out.println("= " + div);
+            System.out.println("= " + (num1 / num2));
         } else if (operation == '^') {
-            int pow;
-            int sum = 0;
+            int mult;
+            int pow = 0;
             for (int i = 1; i < num2; i++ ) {
-                pow = num1 * num1;
-                sum += pow;
+                mult = num1 * num1;
+                pow += mult;
             }
-                System.out.println(sum);
+            System.out.println(pow);
         } else if (operation == '%') {
-            int rem = num1 % num2;
-            System.out.println("= " + rem);
+            System.out.println("= " + (num1 % num2));
         }
     }
 }
