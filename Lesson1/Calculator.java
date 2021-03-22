@@ -19,7 +19,7 @@ public class Calculator {
             System.out.println("= " + (num1 / num2));
         } else if (operation == '^') {
             int pow = 0;
-            for (int i = 0; i < num2; i++) {
+            for (int i = 1; i < num2; i++) {
                 pow += (num1 * num1);
             }
             System.out.println("= " + pow);
