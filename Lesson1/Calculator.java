@@ -4,7 +4,7 @@ public class Calculator {
         int num1 = 10;
 
         System.out.print("Введите знак операции: [+, -, *, /, ^, %] ");
-        char operation = '+';
+        char operation = '^';
 
         System.out.print("Введите второе число: ");
         int num2 = 7;
@@ -18,9 +18,9 @@ public class Calculator {
         } else if (operation == '/') {
             System.out.println("= " + (num1 / num2));
         } else if (operation == '^') {
-            int pow = 0;
-            for (int i = 1; i < num2; i++) {
-                pow += (num1 * num1);
+            int pow = 1;
+            for (int i = 0; i < num2; i++) {
+                pow *= num1;
             }
             System.out.println("= " + pow);
         } else if (operation == '%') {
