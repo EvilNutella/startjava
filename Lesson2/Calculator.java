@@ -3,62 +3,67 @@ public class Calculator {
     private int num2;
     private char operation;
 
-    public int getNum1() {
-        return num1;
-    }
-
     void setNum1(int num1) {
-        System.out.print("Введите первое число: ");
         this.num1 = num1;
     }
 
-    public int getNum2() {
-        return num2;
-    }
-
     void setNum2(int num2) {
-        System.out.print("Введите второе число: ");
         this.num2 = num2;
     }
 
-    public char getOperation() {
-        return operation;
-    }
-
     void setOperation(char operation) {
-        System.out.print("Введите знак операции: [+, -, *, /, ^, %] ");
         this.operation = operation;
     }
 
-    int resault;
-    void setResault(int resault) {
+    void calculate () {
+        int result;
         switch (operation) {
             case '+':
-                resault = (num1 + num2);
+                result = (num1 + num2);
                 break;
             case '-':
-                resault = (num1 - num2);
+                result = (num1 - num2);
                 break;
             case '*':
-                resault = (num1 * num2);
+                result = (num1 * num2);
                 break;
             case '/':
-                resault = (num1 / num2);
+                result = (num1 / num2);
                 break;
             case '^':
                 int pow = 1;
                 for (int i = 0; i < num2; i++) {
                     pow *= num1;
                 }
-                resault = pow;
+                result = pow;
                 break;
             case '%':
-                resault = (num1 % num2);
+                result = (num1 % num2);
                 break;
         }
-        this.resault = resault;
+        this.result = result; // компилятор не может найти result
     }
-        public int getResault() {
-        return this.resault;
+
+    public int getResult() {
+        return this.result; // компилятор не может найти result
     }
+
+    private String cont;
+
+    void setCont(String cont) {
+        this.cont = cont;
+    }
+
+    public void goOn() {
+        switch (cont) {
+            case "yes":
+                calc.main(String[]); //как вызвать мейн из другого класса, если это вообще возможно?)
+                break;
+            case "no":
+                System.out.println("Хорошего дня!");
+                break;
+            default:
+                goOn();
+            }
+        }
 }
