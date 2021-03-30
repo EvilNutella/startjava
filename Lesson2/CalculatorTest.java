@@ -15,18 +15,18 @@ public class CalculatorTest {
             System.out.println("Введите второе число: ");
             calc.setNum2(scanner.nextInt());
 
-            calc.calculate();
-            System.out.println("= " + getResult);
+            System.out.println("= " + calc.calculate());
             goOn();
         } while (cont == "yes");
     }
 
     public static String goOn() {
+        String cont;
         do {
             Scanner scanner1 = new Scanner(System.in);
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
-            String cont = scanner1.nextLine();
-        } while (cont != "yes");
+            cont = scanner1.nextLine();
+        } while (cont != "yes" && cont != "no");
         if (cont == "no") {
             System.out.println("Хорошего дня!");
         }
