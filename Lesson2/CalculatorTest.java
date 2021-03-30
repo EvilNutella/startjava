@@ -17,7 +17,7 @@ public class CalculatorTest {
 
             System.out.println("= " + calc.calculate());
             goOn();
-        } while (cont == "yes");
+        } while (goOn() == "yes");
     }
 
     public static String goOn() {
@@ -26,7 +26,7 @@ public class CalculatorTest {
             Scanner scanner1 = new Scanner(System.in);
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
             cont = scanner1.nextLine();
-        } while (cont != "yes" && cont != "no");
+        } while (cont != "yes" || cont != "no"); 
         if (cont == "no") {
             System.out.println("Хорошего дня!");
         }
