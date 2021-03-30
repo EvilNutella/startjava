@@ -16,7 +16,7 @@ public class Calculator {
     }
 
     void calculate() {
-        int result;
+        int result = 1;
         switch (operation) {
             case '+':
                 result = (num1 + num2);
@@ -39,6 +39,9 @@ public class Calculator {
                 result = (num1 % num2);
                 break;
         }
+        return result;
+    }
+    public String getResult() {
         return result;
     }
 }
