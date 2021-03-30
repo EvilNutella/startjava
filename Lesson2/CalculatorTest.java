@@ -15,10 +15,22 @@ public class CalculatorTest {
         calc.setNum2(scanner.nextInt());
 
         calc.calculate();
-        System.out.println("= " + calc.getResult());
+        System.out.println("= " + result); // компилятор не может найти result
+    }
 
+    public void goOn() {
+        Scanner scanner1 = new Scanner(System.in);
         System.out.println("Хотите продолжить вычисления? [yes/no]:");
-        calc.setCont(scanner.nextLine());
-        calc.goOn();
+        String cont = scanner1.nextLine();
+        switch (cont) {
+            case "yes":
+                main();
+                break;
+            case "no":
+                System.out.println("Хорошего дня!");
+                break;
+            default:
+                goOn();
+            }
     }
 }

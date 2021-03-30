@@ -15,7 +15,7 @@ public class Calculator {
         this.operation = operation;
     }
 
-    void calculate () {
+    void calculate() {
         int result;
         switch (operation) {
             case '+':
@@ -31,39 +31,14 @@ public class Calculator {
                 result = (num1 / num2);
                 break;
             case '^':
-                int pow = 1;
                 for (int i = 0; i < num2; i++) {
-                    pow *= num1;
+                    result *= num1;
                 }
-                result = pow;
                 break;
             case '%':
                 result = (num1 % num2);
                 break;
         }
-        this.result = result; // компилятор не может найти result
+        return result;
     }
-
-    public int getResult() {
-        return this.result; // компилятор не может найти result
-    }
-
-    private String cont;
-
-    void setCont(String cont) {
-        this.cont = cont;
-    }
-
-    public void goOn() {
-        switch (cont) {
-            case "yes":
-                calc.main(String[]); //как вызвать мейн из другого класса, если это вообще возможно?)
-                break;
-            case "no":
-                System.out.println("Хорошего дня!");
-                break;
-            default:
-                goOn();
-            }
-        }
 }
