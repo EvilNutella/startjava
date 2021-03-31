@@ -16,20 +16,24 @@ public class CalculatorTest {
             calc.setNum2(scanner.nextInt());
 
             System.out.println("= " + calc.calculate());
-            goOn();
-        } while (goOn() == "yes");
+            isNext();
+        } while (isNext());
+
+        System.out.println("Хорошего дня!");
     }
 
-    public static String goOn() {
-        String cont;
+    public static boolean isNext() {
+        String continuation;
         do {
             Scanner scanner1 = new Scanner(System.in);
+            scanner1.nextLine();
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
-            cont = scanner1.nextLine();
-        } while (cont != "yes" || cont != "no"); 
-        if (cont == "no") {
-            System.out.println("Хорошего дня!");
+            continuation = scanner1.nextLine();
+        } while (continuation != "yes" && continuation != "no"); 
+        if (continuation == "no") {
+        return false;
+        } else {
+            return true;
         }
-            return cont;
     }
 }

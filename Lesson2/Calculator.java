@@ -16,7 +16,7 @@ public class Calculator {
     }
 
     int calculate() {
-        int result = 1;
+        int result = 0;
         switch (operation) {
             case '+':
                 result = (num1 + num2);
@@ -31,6 +31,7 @@ public class Calculator {
                 result = (num1 / num2);
                 break;
             case '^':
+            result = 1;
                 for (int i = 0; i < num2; i++) {
                     result *= num1;
                 }
