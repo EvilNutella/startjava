@@ -31,7 +31,7 @@ public class Calculator {
                 result = (num1 / num2);
                 break;
             case '^':
-            result = 1;
+                result = 1;
                 for (int i = 0; i < num2; i++) {
                     result *= num1;
                 }

@@ -16,7 +16,6 @@ public class CalculatorTest {
             calc.setNum2(scanner.nextInt());
 
             System.out.println("= " + calc.calculate());
-            isNext();
         } while (isNext());
 
         System.out.println("Хорошего дня!");
@@ -24,16 +23,14 @@ public class CalculatorTest {
 
     public static boolean isNext() {
         String continuation;
+        Scanner scanner1 = new Scanner(System.in);
         do {
-            Scanner scanner1 = new Scanner(System.in);
             scanner1.nextLine();
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
             continuation = scanner1.nextLine();
         } while (continuation != "yes" && continuation != "no"); 
-        if (continuation == "no") {
-        return false;
-        } else {
-            return true;
+        if (continuation == "no"? false : true) {
+        return true;
         }
     }
 }
