@@ -25,12 +25,9 @@ public class CalculatorTest {
         String continuation;
         Scanner scanner1 = new Scanner(System.in);
         do {
-            scanner1.nextLine();
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
             continuation = scanner1.nextLine();
         } while (continuation != "yes" && continuation != "no"); 
-        if (continuation == "no"? false : true) {
-        return true;
-        }
+        return continuation == "yes";
     }
 }
