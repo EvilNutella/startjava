@@ -1,6 +1,6 @@
 public class JaegerTest {
     public static void main(String[] args) {
-        Jaeger1 robot1 = new Jaeger1("Cherno Alpha", "Mark-1", 85.3f, 2.4f, 10, 10);
+        Jaeger robot1 = new Jaeger("Cherno Alpha", "Mark-1", 85.3f, 2.4f, 10, 10);
         System.out.println("ModelName: " + robot1.getModelName());
 
         System.out.println("Mark: " + robot1.getMark());
@@ -15,7 +15,7 @@ public class JaegerTest {
 
         robot1.move();
 
-        Jaeger1 robot2 = new Jaeger1("Striker Eureka", "Mark-5", 76.2f, 1.9f, 10, 9);
+        Jaeger robot2 = new Jaeger("Striker Eureka", "Mark-5", 76.2f, 1.9f, 10, 9);
         System.out.println("ModelName: " + robot2.getModelName());
 
         System.out.println("Mark: " + robot2.getMark());
