@@ -23,11 +23,11 @@ public class CalculatorTest {
 
     public static boolean isNext() {
         String continuation;
-        Scanner scanner1 = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("Хотите продолжить вычисления? [yes/no]:");
             continuation = scanner1.nextLine();
-        } while (continuation != "yes" && continuation != "no"); 
-        return continuation == "yes";
+        } while (!"yes".equals(continuation) && !"no".equals(continuation)); 
+        return "yes".equals(continuation);
     }
 }
